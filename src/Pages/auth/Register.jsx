@@ -40,7 +40,7 @@ const Register = () => {
 
         // Redirect based on role
         if (data.role === "admin") {
-          window.location.href = "https://finalproject-adminportal.vercel.app";
+          navigate("https://finalproject-adminportal.vercel.app");
         } else {
           navigate("/");
         }

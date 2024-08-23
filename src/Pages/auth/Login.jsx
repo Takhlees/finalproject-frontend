@@ -33,7 +33,7 @@ const Login = () => {
 
         setTimeout(() => {
           if (data.role === "admin") {
-            window.location.href = "https://finalproject-adminportal.vercel.app";
+            navigate("https://finalproject-adminportal.vercel.app");
           } else {
             navigate("/");
           }
