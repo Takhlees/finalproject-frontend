@@ -18,7 +18,8 @@ const Review = () => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-          },
+          } , 
+          credentials: 'include', 
           body: JSON.stringify({roomId: _id, comment: reviewText }),
         });
 
@@ -41,7 +42,10 @@ const Review = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch(`https://glimmer-petal-ceder.glitch.me/api/reviews/${_id}`);
+        const response = await fetch(`https://glimmer-petal-ceder.glitch.me/api/reviews/${_id}`, {
+          method: 'GET', 
+          credentials: 'include', 
+        });
         if (!response.ok) {
           throw new Error('Failed to fetch reviews');
         }

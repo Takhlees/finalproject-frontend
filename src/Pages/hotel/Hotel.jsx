@@ -15,7 +15,10 @@ const Hotel = () => {
   useEffect(() => {
     const fetchHotelDetails = async () => {
       try {
-        const response = await fetch(`https://glimmer-petal-ceder.glitch.me/api/rooms/${id}`);
+        const response = await fetch(`https://glimmer-petal-ceder.glitch.me/api/rooms/${id}`, {
+          method: 'GET', 
+          credentials: 'include', 
+        });
         const data = await response.json();
 
         setHotel(data);

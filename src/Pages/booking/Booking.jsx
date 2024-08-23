@@ -32,6 +32,7 @@ const Booking = () => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${Cookies.get("token")}`,
       },
+      credentials: 'include',
     })
       .then((response) => response.json())
       .then((data) => {
@@ -48,6 +49,7 @@ const Booking = () => {
       headers: {
         "Content-Type": "application/json",
       },
+      credentials: 'include',
     })
       .then((response) => response.json())
       .then((roomData) => {
@@ -73,6 +75,7 @@ const Booking = () => {
       const response = await fetch("https://glimmer-petal-ceder.glitch.me/api/bookings/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: 'include',
         body: JSON.stringify(formData),
       });
       const data = await response.json();
