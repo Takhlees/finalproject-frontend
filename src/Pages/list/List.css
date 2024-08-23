@@ -1,0 +1,167 @@
+.listContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .listWrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .listSearch {
+    flex: 1;
+    background-color: #febb02;
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+  }
+  
+  .lsTitle{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .lsItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .lsItem>label{
+    font-size: 12px;
+  }
+  
+  .lsItem>input{
+    height: 30px;
+    border: none;
+    padding: 5px;
+  }
+  .lsItem>span{
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .lsOptions{
+    padding: 10px;
+  }
+  
+  .lsOptionItem{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 12px;
+  }
+  
+  .lsOptionInput{
+    width: 50px;
+  }
+  
+  .listSearch>button{
+    padding: 10px;
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .listResult {
+    flex: 3;
+  }
+  
+
+  @media (max-width: 1024px) {
+    .listWrapper {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 10px; /* Add padding on smaller screens */
+    }
+
+    .listSearch {
+        position: static;
+        width: 100%;
+    }
+
+    .listResult {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .listContainer {
+        padding: 0 10px; /* Add padding to the container */
+    }
+
+    .listWrapper {
+        padding: 0;
+    }
+
+    .lsTitle {
+        font-size: 18px;
+    }
+
+    .lsItem > label {
+        font-size: 10px;
+    }
+
+    .lsItem > input,
+    .lsItem > span {
+        height: 25px;
+        padding: 4px;
+    }
+
+    .lsOptionItem {
+        font-size: 10px;
+    }
+
+    .listSearch > button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .listContainer {
+        padding: 0 5px; /* Further reduce padding on very small screens */
+    }
+
+    .listWrapper {
+        padding: 0;
+    }
+
+    .lsTitle {
+        font-size: 16px;
+    }
+
+    .lsItem > label {
+        font-size: 8px;
+    }
+
+    .lsItem > input,
+    .lsItem > span {
+        height: 20px;
+        padding: 3px;
+    }
+
+    .lsOptionItem {
+        font-size: 8px;
+    }
+
+    .listSearch > button {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
