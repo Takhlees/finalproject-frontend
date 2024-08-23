@@ -26,14 +26,14 @@ const Login = () => {
       if (response.ok) {
         console.log("Login successful:", data);
 
-        document.cookie = `token=${data.token}; path=/; domain=localhost;`;
-        document.cookie = `userID=${data.id}; path=/; domain=localhost;`;
+        document.cookie = `token=${data.token}; path=/; domain=.vercel.app;`;
+        document.cookie = `userID=${data.id}; path=/; domain=.vercel.app;`;
 
         setNotification("You have successfully logged in!");
 
         setTimeout(() => {
           if (data.role === "admin") {
-            window.location.href = "http://localhost:3001";
+            window.location.href = "https://finalproject-adminportal.vercel.app";
           } else {
             navigate("/");
           }

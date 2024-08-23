@@ -11,8 +11,8 @@ const Navbar = () => {
 
   const handleLogout = () => {
     
-    document.cookie = 'token=; path=/; domain=localhost; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    document.cookie = 'userID=; path=/; domain=localhost; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    document.cookie = 'token=; path=/; domain=.vercel.app; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    document.cookie = 'userID=; path=/; domain=.vercel.app; expires=Thu, 01 Jan 1970 00:00:00 GMT';
 
     navigate('/auth/login');
   };
