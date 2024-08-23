@@ -81,7 +81,6 @@ const Booking = () => {
       const data = await response.json();
       if (response.ok) {
         console.log("Booking successful:", data);
-        Cookies.set("token", data.token, { path: "/", domain: ".vercel.app" });
         navigate("/payment", { state: { ...formData } });
       } else {
         console.error(data.message);
